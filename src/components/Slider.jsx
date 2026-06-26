@@ -40,13 +40,13 @@ export default function Slider() {
   }
 
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto w-full">
       <div className="text-center mb-12">
         <span className="font-mono text-xs text-forsythia/70 tracking-widest uppercase">Case Studies</span>
-        <h2 className="text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
           Proven at <span className="text-gradient">scale</span>
         </h2>
-        <p className="text-mysticMint/60 text-lg max-w-xl mx-auto">
+        <p className="text-mysticMint/60 text-base sm:text-lg max-w-xl mx-auto">
           Teams across every industry rely on Armory for their most critical workflows.
         </p>
       </div>
@@ -59,22 +59,22 @@ export default function Slider() {
         >
           {projects.map((p, i) => (
             <div key={i} className="min-w-full">
-              <div className="glass-light border border-mysticMint/10 rounded-2xl p-8 md:p-12 mx-1">
-                <div className="flex items-start justify-between mb-6">
-                  <div>
+              <div className="glass-light border border-mysticMint/10 rounded-2xl p-5 sm:p-8 md:p-12">
+                <div className="flex flex-col gap-5 sm:gap-6 mb-6">
+                  <div className="text-left">
                     <span className="text-xs font-mono text-forsythia bg-forsythia/10 px-3 py-1 rounded-full">{p.tag}</span>
-                    <h3 className="text-2xl md:text-3xl font-bold text-arcticPowder mt-3">{p.title}</h3>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-arcticPowder mt-3">{p.title}</h3>
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-3 sm:gap-4 justify-start">
                     {p.metrics.map(m => (
-                      <div key={m.label} className="text-center glass rounded-xl px-4 py-3">
+                      <div key={m.label} className="text-left glass rounded-xl px-4 py-3 min-w-[7rem]">
                         <div className="font-mono text-xl font-bold text-forsythia">{m.val}</div>
                         <div className="text-xs text-mysticMint/50 mt-0.5">{m.label}</div>
                       </div>
                     ))}
                   </div>
                 </div>
-                <p className="text-mysticMint/60 text-lg leading-relaxed max-w-2xl">{p.desc}</p>
+                <p className="text-mysticMint/60 text-base sm:text-lg leading-relaxed text-left">{p.desc}</p>
               </div>
             </div>
           ))}

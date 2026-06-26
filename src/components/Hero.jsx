@@ -2,44 +2,44 @@ export default function Hero() {
   const logos = ['Stripe', 'Vercel', 'Linear', 'Notion', 'Figma', 'Slack', 'GitHub', 'AWS']
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden bg-dot-grid">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden bg-dot-grid w-full">
       {/* Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full opacity-20 blur-[120px] pointer-events-none"
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(700px,100vw)] h-[400px] rounded-full opacity-20 blur-[120px] pointer-events-none"
         style={{ background: 'radial-gradient(ellipse, #FFC801 0%, #FF9932 40%, transparent 70%)' }} />
 
       {/* Badge */}
-      <div className="relative z-10 flex items-center gap-2 mb-6 glass rounded-full px-4 py-2 text-sm">
-        <img src="/svgs/arrow-trending-up.svg" className="w-4 h-4" style={{filter:'invert(84%) sepia(49%) saturate(800%) hue-rotate(0deg)'}} alt="" />
+      <div className="relative z-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mb-6 glass rounded-full px-4 py-2 text-sm text-center max-w-[calc(100vw-2rem)]">
+        <img src="/svgs/arrow-trending-up.svg" className="w-4 h-4 shrink-0" style={{filter:'invert(84%) sepia(49%) saturate(800%) hue-rotate(0deg)'}} alt="" />
         <span className="text-forsythia font-mono font-medium">Powered by Adaptive AI</span>
-        <span className="text-mysticMint/50 ml-1">→ 12× faster automation</span>
+        <span className="text-mysticMint/50">→ 12× faster automation</span>
       </div>
 
       {/* Headline */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-6">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 w-full">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-6">
           <span className="text-arcticPowder">Automate Everything.</span>
           <br />
           <span className="text-gradient font-mono">Scale Effortlessly.</span>
         </h1>
-        <p className="text-lg md:text-xl text-mysticMint/70 max-w-2xl mx-auto leading-relaxed mb-10">
+        <p className="text-base sm:text-lg md:text-xl text-mysticMint/70 max-w-2xl mx-auto leading-relaxed mb-10 px-1">
           Armory is the AI-native data automation platform built for engineering teams who refuse to settle. 
           Connect, orchestrate, and ship — without the overhead.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <button className="flex items-center gap-2 bg-forsythia text-oceanicNoir font-semibold px-8 py-4 rounded-xl text-base hover:bg-deepSaffron transition-all duration-200 shadow-xl shadow-forsythia/30 hover:scale-105">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-16 w-full max-w-md sm:max-w-none mx-auto">
+          <button className="flex items-center justify-center gap-2 bg-forsythia text-oceanicNoir font-semibold px-8 py-4 rounded-xl text-base hover:bg-deepSaffron transition-all duration-200 shadow-xl shadow-forsythia/30 hover:scale-105 w-full sm:w-auto">
             <img src="/svgs/link-solid.svg" className="w-4 h-4" style={{filter:'invert(0)'}} alt="" />
             Start Building Free
           </button>
-          <button className="flex items-center gap-2 glass border border-mysticMint/20 text-arcticPowder px-8 py-4 rounded-xl text-base hover:border-forsythia/50 transition-all duration-200 hover:scale-105">
+          <button className="flex items-center justify-center gap-2 glass border border-mysticMint/20 text-arcticPowder px-8 py-4 rounded-xl text-base hover:border-forsythia/50 transition-all duration-200 hover:scale-105 w-full sm:w-auto">
             <img src="/svgs/arrow-path.svg" className="w-4 h-4" style={{filter:'invert(1)'}} alt="" />
             Watch Demo
           </button>
         </div>
 
         {/* Stats Row */}
-        <div className="flex flex-wrap justify-center gap-8 mb-16 text-center">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-16 text-center w-full">
           {[
             { value: '12×', label: 'Faster workflows' },
             { value: '99.9%', label: 'Uptime SLA' },

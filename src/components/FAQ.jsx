@@ -32,7 +32,7 @@ function FAQItem({ item, isOpen, onToggle }) {
         className="w-full flex items-center justify-between p-5 md:p-6 text-left"
         onClick={onToggle}
       >
-        <span className={`font-semibold text-base md:text-lg transition-colors ${isOpen ? 'text-forsythia' : 'text-arcticPowder'}`}>{item.q}</span>
+        <span className={`font-semibold text-sm sm:text-base md:text-lg transition-colors text-left pr-3 ${isOpen ? 'text-forsythia' : 'text-arcticPowder'}`}>{item.q}</span>
         <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ml-4 transition-all duration-300 ${isOpen ? 'bg-forsythia rotate-45' : 'bg-nocturnalExpedition'}`}>
           <svg width="10" height="10" viewBox="0 0 10 10" fill={isOpen ? '#172B36' : '#D9E8E2'}>
             <path d="M5 1V9M1 5H9" stroke={isOpen ? '#172B36' : '#D9E8E2'} strokeWidth="1.5" strokeLinecap="round"/>
@@ -47,7 +47,7 @@ function FAQItem({ item, isOpen, onToggle }) {
           transition: 'max-height 350ms cubic-bezier(0.4, 0, 0.2, 1)',
         }}
       >
-        <p className="px-5 md:px-6 pb-5 text-mysticMint/60 text-sm md:text-base leading-relaxed">
+        <p className="px-5 md:px-6 pb-5 text-mysticMint/60 text-sm md:text-base leading-relaxed text-left">
           {item.a}
         </p>
       </div>
@@ -59,13 +59,13 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState(0)
 
   return (
-    <section id="faq" className="py-24 px-6 max-w-4xl mx-auto">
-      <div className="text-center mb-14">
+    <section id="faq" className="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto w-full">
+      <div className="text-center mb-12 sm:mb-14">
         <span className="font-mono text-xs text-forsythia/70 tracking-widest uppercase">FAQ</span>
-        <h2 className="text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
           Questions? <span className="text-gradient">Answered.</span>
         </h2>
-        <p className="text-mysticMint/60 text-lg">
+        <p className="text-mysticMint/60 text-base sm:text-lg">
           Everything you need to know about Armory.
         </p>
       </div>

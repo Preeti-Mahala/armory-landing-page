@@ -5,7 +5,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-mysticMint/10">
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <img src="/svgs/cube-16-solid.svg" alt="Armory" className="w-7 h-7" style={{filter:'invert(84%) sepia(49%) saturate(800%) hue-rotate(0deg)'}} />
@@ -41,7 +41,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden glass border-t border-mysticMint/10 px-6 py-4 flex flex-col gap-4 text-sm text-mysticMint/80">
+        <div className="md:hidden glass border-t border-mysticMint/10 px-4 sm:px-6 py-4 flex flex-col gap-4 text-sm text-mysticMint/80">
           <a href="#features" onClick={() => setMenuOpen(false)} className="hover:text-forsythia transition-colors">Features</a>
           <a href="#performance" onClick={() => setMenuOpen(false)} className="hover:text-forsythia transition-colors">Performance</a>
           <a href="#pricing" onClick={() => setMenuOpen(false)} className="hover:text-forsythia transition-colors">Pricing</a>

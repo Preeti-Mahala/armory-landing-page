@@ -2,11 +2,11 @@ export default function Footer() {
   return (
     <footer className="border-t border-mysticMint/10 mt-12">
       {/* CTA Banner */}
-      <div className="max-w-7xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-arcticPowder mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-arcticPowder mb-4">
           Ready to <span className="text-gradient">automate?</span>
         </h2>
-        <p className="text-mysticMint/60 text-lg mb-8 max-w-xl mx-auto">
+        <p className="text-mysticMint/60 text-base sm:text-lg mb-8 max-w-xl mx-auto">
           Join 40,000+ engineering teams shipping smarter workflows with Armory.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">
@@ -22,7 +22,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Links */}
-      <div className="max-w-7xl mx-auto px-6 pb-10 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-mysticMint/10 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-10 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-mysticMint/10 pt-8 text-center md:text-left">
         <div className="flex items-center gap-2">
           <img src="/svgs/cube-16-solid.svg" className="w-5 h-5" style={{ filter: 'invert(84%) sepia(49%) saturate(800%) hue-rotate(0deg)' }} alt="" />
           <span className="font-mono font-bold text-forsythia">ARMORY</span>

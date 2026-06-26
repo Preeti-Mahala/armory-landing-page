@@ -82,14 +82,14 @@ export default function Pricing() {
   }, [updatePrices])
 
   return (
-    <section id="pricing" className="py-24 px-6 max-w-7xl mx-auto">
+    <section id="pricing" className="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto w-full">
       {/* Section header */}
       <div className="text-center mb-12">
         <span className="font-mono text-xs text-forsythia/70 tracking-widest uppercase">Pricing</span>
-        <h2 className="text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
           Simple, transparent <span className="text-gradient">pricing</span>
         </h2>
-        <p className="text-mysticMint/60 text-lg max-w-xl mx-auto">No surprises. Switch plans or cancel anytime.</p>
+        <p className="text-mysticMint/60 text-base sm:text-lg max-w-xl mx-auto">No surprises. Switch plans or cancel anytime.</p>
       </div>
 
       {/* Controls: Billing Toggle + Currency Selector */}
@@ -136,9 +136,9 @@ export default function Pricing() {
         {PLANS.map(plan => (
           <div
             key={plan.name}
-            className={`relative rounded-2xl p-7 flex flex-col gap-5 transition-all duration-300 ${
+            className={`relative rounded-2xl p-5 sm:p-7 flex flex-col gap-5 transition-all duration-300 ${
               plan.highlight
-                ? 'border-2 border-forsythia shadow-2xl shadow-forsythia/20 scale-[1.02]'
+                ? 'border-2 border-forsythia shadow-2xl shadow-forsythia/20 md:scale-[1.02]'
                 : 'glass-light border border-mysticMint/10 hover:border-forsythia/30'
             }`}
             style={plan.highlight ? { background: 'linear-gradient(135deg, #1a3340 0%, #172B36 100%)' } : {}}

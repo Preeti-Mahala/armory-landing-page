@@ -24,20 +24,21 @@ export default function NodeGraph() {
   const nodeMap = Object.fromEntries(nodes.map(n => [n.id, n]))
 
   return (
-    <section id="performance" className="py-24 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+    <section id="performance" className="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+      <div className="text-center mb-12 sm:mb-16">
         <span className="font-mono text-xs text-forsythia/70 tracking-widest uppercase">Visual Editor</span>
-        <h2 className="text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
           Build logic <span className="text-gradient">at scale</span>
         </h2>
-        <p className="text-mysticMint/60 text-lg max-w-2xl mx-auto">
+        <p className="text-mysticMint/60 text-base sm:text-lg max-w-2xl mx-auto">
           Compose complex multi-step workflows visually. Every node is a real production capability — no abstraction layers.
         </p>
       </div>
 
-      <div className="glass-light rounded-3xl border border-mysticMint/10 p-6 md:p-10 bg-dot-grid overflow-x-auto">
+      <div className="glass-light rounded-3xl border border-mysticMint/10 p-4 sm:p-6 md:p-10 bg-dot-grid overflow-hidden w-full">
         {/* Node Graph SVG */}
-        <svg viewBox="0 0 90 15" className="w-full min-w-[600px]" style={{ height: '220px' }}>
+        <div className="w-full overflow-x-auto">
+          <svg viewBox="0 0 90 15" className="w-full h-[180px] sm:h-[220px]" preserveAspectRatio="xMidYMid meet">
           {/* Edges */}
           {edges.map((edge, i) => {
             const from = getCenter(nodeMap[edge.from])
@@ -81,6 +82,7 @@ export default function NodeGraph() {
             </g>
           ))}
         </svg>
+        </div>
 
         {/* Stats under graph */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">

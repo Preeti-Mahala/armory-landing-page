@@ -115,14 +115,14 @@ export default function BentoGrid() {
   const handleSelect = (id) => setActiveIdx(id)
 
   return (
-    <section id="features" className="py-24 px-6 max-w-7xl mx-auto">
+    <section id="features" className="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto w-full">
       {/* Section Header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-12 sm:mb-16">
         <span className="font-mono text-xs text-forsythia/70 tracking-widest uppercase">Platform Features</span>
-        <h2 className="text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-arcticPowder mt-3 mb-4">
           Everything you need to <span className="text-gradient">ship faster</span>
         </h2>
-        <p className="text-mysticMint/60 text-lg max-w-2xl mx-auto">
+        <p className="text-mysticMint/60 text-base sm:text-lg max-w-2xl mx-auto">
           Armory bundles everything modern engineering teams need into one beautifully designed platform.
         </p>
       </div>
